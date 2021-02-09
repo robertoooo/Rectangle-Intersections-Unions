@@ -5,9 +5,8 @@ from utils.ingest import Ingest
 import pytest
 
 
-class TestIngest(unittest.TestCase):
-
-    def test_loadReadFile(self):
+class TestClass(unittest.TestCase):
+    def test_ingest(self):
         subprocess.call(["touch", "testfile.json"], shell=True)
         testjson = {
             "rects": [
@@ -25,13 +24,9 @@ class TestIngest(unittest.TestCase):
 
         self.assertEqual(data._rects, testjson['rects'])
 
-    def test_read_input(self):
+    def test_read(self):
         """
         Test that we can read input.
         """
 
         #result = data._rects
-
-
-if __name__ == '__main__':
-    unittest.main()
