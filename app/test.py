@@ -2,6 +2,7 @@ import json
 import subprocess
 import unittest
 from utils.ingest import Ingest
+import pytest
 
 
 class TestIngest(unittest.TestCase):
