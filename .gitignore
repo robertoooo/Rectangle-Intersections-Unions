@@ -130,3 +130,5 @@ dmypy.json
 
 #Extra
 __pycache__
+.vscode
+*/*/__pycache__
