@@ -1,0 +1,11 @@
+attrs==20.3.0
+autopep8==1.5.5
+genson==1.2.2
+importlib-metadata==3.4.0
+jsonschema==3.2.0
+pycodestyle==2.6.0
+pyrsistent==0.17.3
+six==1.15.0
+toml==0.10.2
+typing-extensions==3.7.4.3
+zipp==3.4.0
