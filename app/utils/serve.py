@@ -4,12 +4,14 @@ class Serve:
         self.all_rectangles = all_rectangles
 
     def print_input(self):
+        """Prints the input values to STD OUT"""
         print("Input: ")
         for i, v in enumerate(self.all_rectangles):
             print("\t{}: Rectangle at ({},{}), delta_x={}, delta_y={}.".format(
                 i+1, v.x, v.y, v.delta_x, v.delta_y))
 
     def print_output(self):
+        """Prints the output values to STD OUT"""
         print("Intersections: ")
         for i, v in enumerate(self.unions):
 

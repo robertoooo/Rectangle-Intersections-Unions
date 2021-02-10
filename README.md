@@ -36,7 +36,7 @@ The test will automatically run when pushing to development or when master makes
 pytest
 ```
 
-# Example of Input/Output
+## Example of Input/Output
 
 The input JSON file:
 
