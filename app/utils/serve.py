@@ -18,7 +18,7 @@ class Serve:
                 if(j+1 < len(v.index)):
                     index_string = index_string + "{} ".format(v.index[j]+1)
                 else:
-                    index_string = index_string + "and {}".format(v.index[j])
+                    index_string = index_string + "and {}".format(v.index[j]+1)
 
             lenght = len(v.index)
             print("\t{0}: Between rectangle {1} at ({2},{3}), delta_x={4}, delta_y={5}.".format(
