@@ -35,16 +35,18 @@ class Ingest:
                                 ],
                                 "properties": {
                                     "x": {
-                                        "type": "integer"
+                                        "type": "integer",
                                     },
                                     "y": {
-                                        "type": "integer"
+                                        "type": "integer",
                                     },
                                     "delta_x": {
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "minimum": 0,
                                     },
                                     "delta_y": {
-                                        "type": "integer"
+                                        "type": "integer",
+                                        "minimum": 0,
                                     }
                                 }
                             }
