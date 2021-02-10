@@ -1,25 +1,33 @@
 from utils.ingest import Ingest
 from utils.rectangle import Rectangle
+from utils.serve import Serve
 import sys
 
 
 def main():
+    # Use the input argument as path to file and ingest the file creating an all_rectangles object with the list of dictionaries
     path_to_file = sys.argv[1]
-    allRectangles = Ingest(path_to_file)  # Initilize the ingestions
+    all_rectangles = Ingest(path_to_file)  # Initilize the ingestions
 
+    # Loop over the list of all_rectangles and store them in a list of objects
     rects = []
-    for i, v in enumerate(allRectangles._rects):
+    for i, v in enumerate(all_rectangles._rects):
         rects.append(Rectangle(i, v["x"], v["y"], v["delta_x"], v["delta_y"]))
 
-    Union1 = Rectangle.get_first_union(rects)
-    Union2 = Rectangle.get_union(rects, Union1)
-    Union3 = Rectangle.get_union(rects, Union2)
-    for i in range(len(Union1)):
-        print(Union1[i].x, Union1[i].y, Union1[i].delta_x, Union1[i].delta_y, Union1[i].index)
-    for i in range(len(Union2)):
-        print(Union2[i].x, Union2[i].y, Union2[i].delta_x, Union2[i].delta_y, Union2[i].index)
-    for i in range(len(Union3)):
-        print(Union3[i].x, Union3[i].y, Union3[i].delta_x, Union3[i].delta_y, Union3[i].index)
+    # Produce the first set of unions
+    unions = Rectangle.get_first_union(rects)
+    temp_union = unions
+
+    # Loop that can handle as many unions there is
+    while temp_union:
+        union = Rectangle.get_union(rects, temp_union)
+        temp_union = union
+        unions = unions + union
+
+    # Serve object handles the prints
+    serve_object = Serve(rects, unions)
+    serve_object.print_input()
+    serve_object.print_output()
 
 
 main()

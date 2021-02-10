@@ -14,7 +14,7 @@ class Rectangle:
         for i in range(len(all_rectangles)):  # Loop over all rectangles
             for j in range(i + 1, len(all_rectangles)):  # Loop over again
                 coordinates = Rectangle.area(all_rectangles[i], all_rectangles[j])
-                if coordinates:
+                if coordinates and not 0 in coordinates:
                     rectObj = Rectangle(
                         [all_rectangles[i].index, all_rectangles[j].index],
                         coordinates[0],
@@ -33,7 +33,7 @@ class Rectangle:
             for j in range(len(all_rectangles)):
                 if not j in intersections[i].index:  # No need to compare with the rectangle that is part of the index.
                     coordinates = Rectangle.area(intersections[i], all_rectangles[j])
-                    if coordinates:
+                    if coordinates and not 0 in coordinates:
                         index = sorted((intersections[i].index + [all_rectangles[j].index]))
                         if not index in tempIndex:  # Check that the combination have not been added
                             rectObj = Rectangle(
