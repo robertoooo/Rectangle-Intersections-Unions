@@ -8,11 +8,7 @@ class Ingest:
     def __init__(self, path) -> (None):
         self._path = path
         self.loadStatus = self.loadFile()
-        if self.loadStatus == False:
-            exit()
         self.readstatus = self.readFile()
-        if self.readstatus == False:
-            exit()
 
     def loadFile(self) -> (str):
         """Load the .json file """
