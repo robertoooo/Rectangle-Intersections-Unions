@@ -1,4 +1,19 @@
-class Serve:
+from abc import ABC, abstractmethod
+
+
+class Base(ABC):
+    """Base class for printing results"""
+
+    def print_output(self):
+        print("Mothod not implemented")
+
+    def print_input(self):
+        print("Mothod not implemented")
+
+
+class PrintRectangle(Base):
+    """Rectangle Print class"""
+
     def __init__(self, all_rectangles, unions):
         self.unions = unions
         self.all_rectangles = all_rectangles

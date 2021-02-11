@@ -1,13 +1,11 @@
 import json
 import subprocess
 import unittest
-from utils.ingest import Ingest
-from utils.rectangle import Rectangle
 import pytest
+from utils import Ingest, Rectangle
 
 
 class TestClass(unittest.TestCase):
-
     def test_ingest_read_1(self):
         """Test the Ingest class methods loadFile and readFile"""
         subprocess.call(["touch", "testfile.json"], shell=True)

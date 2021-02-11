@@ -1,7 +1,5 @@
-from utils.ingest import Ingest
-from utils.rectangle import Rectangle
-from utils.serve import Serve
 import sys
+from utils import Ingest, Rectangle, PrintRectangle
 
 
 def main():
@@ -23,7 +21,7 @@ def main():
         unions = unions + union
 
     # Serve object handles the prints
-    serve_object = Serve(rects_list_obj, unions)
+    serve_object = PrintRectangle(rects_list_obj, unions)
     serve_object.print_input()
     serve_object.print_output()
 
