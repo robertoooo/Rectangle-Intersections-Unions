@@ -55,7 +55,6 @@ class Ingest:
         try:
             with open(self._path) as f:
                 self._rects = json.load(f)
-                print(self._rects)
         except Exception as e:
             self.error = "Failed to load file, check the path or the format of the file"
             return False

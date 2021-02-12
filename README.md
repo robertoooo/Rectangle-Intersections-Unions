@@ -20,10 +20,17 @@ pip install -r requriements
 ```
 
 4. Run the main.py file pointing at the file of rectangles
+   Run the main progam from the app folder or root folder
 
 ```sh
-py main.py <path to output file>
-py main.py ./input.json #Run the example file
+py main.py <path to input file>  #App folder
+py app/main.py app/<path to input file>  #Root folder
+```
+
+Examples
+
+```sh
+py main.py ./input.json #Run the main program with the example file as input argument
 py main.py <path to input file> > <path to output file> #Point STDO to a file instead of console.
 
 ```
