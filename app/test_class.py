@@ -55,3 +55,5 @@ class TestClass(unittest.TestCase):
         self.assertEqual(unions[0].x, 100)
         self.assertEqual(unions[0].delta_y, 10)
         self.assertEqual(unions[0].index, [0, 1])
+
+    # More test to be added to cover all the methods
