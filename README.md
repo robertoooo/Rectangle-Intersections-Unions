@@ -3,6 +3,8 @@
 Find the intersection between 2D rectangles and calculate the union.
 The program will calculate the first unions to the n:th unions.
 
+![Alt text](Rectangle_Intersection.png?raw=true "Illustration")
+
 ## Contents
 
 1. Clone the repository
